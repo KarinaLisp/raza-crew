@@ -18,7 +18,7 @@
   :resource-paths ["config", "resources"]
 
   ;; For HTTP/2
-  :java-agents [[org.mortbay.jetty.alpn/jetty-alpn-agent "2.0.5"]]
+  ;:java-agents [[org.mortbay.jetty.alpn/jetty-alpn-agent "2.0.5"]]
 
   :profiles {:run
              {:aliases
