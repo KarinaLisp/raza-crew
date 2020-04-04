@@ -4,8 +4,7 @@
    [clojure.java.io :as io]
    [com.walmartlabs.lacinia.pedestal :refer [service-map]]
    [com.walmartlabs.lacinia.schema :as schema]
-   [com.walmartlabs.lacinia.util :refer [attach-resolvers]]
-   [io.pedestal.http :as http]))
+   [com.walmartlabs.lacinia.util :refer [attach-resolvers]]))
 
 (defn ^:private get-hero [context arguments value]
   (let [{:keys [episode]} arguments]
@@ -30,6 +29,6 @@
                          :get-droid (constantly {})})
       schema/compile))
 
-(def service
+(defn service []
   (-> (schema)
       (service-map {:graphiql true})))
