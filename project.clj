@@ -1,6 +1,6 @@
-(defproject raza-crew "0.0.1-SNAPSHOT"
-  :description "A hello-world project"
-  :url "http://example.com/FIXME"
+(defproject raza-crew "0.0.2-SNAPSHOT"
+  :description "Experimental graphql backend on Clojure stack"
+  :url "https://raza-crew.rina.wtf"
 
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
@@ -17,8 +17,8 @@
   :min-lein-version "2.0.0"
   :resource-paths ["config", "resources"]
 
-  ;; If you use HTTP/2 or ALPN, use the java-agent to pull in the correct alpn-boot dependency
-  ;:java-agents [[org.mortbay.jetty.alpn/jetty-alpn-agent "2.0.5"]]
+  ;; For HTTP/2
+  :java-agents [[org.mortbay.jetty.alpn/jetty-alpn-agent "2.0.5"]]
 
   :profiles {:run
              {:aliases
